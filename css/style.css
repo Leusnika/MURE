@@ -1,0 +1,1645 @@
+* {
+    box-sizing: border-box;
+    min-height: 0;
+    min-width: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    /*background-image: url('./DBpng.png');*/
+    max-width: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+/* .container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+
+} */
+
+
+
+.header {
+    background-image: url(../img/Header_background2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 803px;
+    margin-bottom: 222px;
+    position: relative;
+}
+
+.header__title {
+    animation-duration: 4s;
+    animation-delay: 0.8s;
+}
+
+.header__navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo a {
+    width: 458px;
+    height: 139px;
+    color: #fdfefd;
+    font-family: Raleway;
+    font-size: 150px;
+    font-weight: 200;
+    line-height: 22px;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+}
+
+.header__logo {
+    position: absolute;
+    top: 323px;
+    right: 25px;
+    letter-spacing: 0.9em;
+}
+
+.header__nav {
+    height: 14.8%;
+    /* Specify a height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    opacity: 0.8;
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidepanel */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+
+}
+
+/* The sidepanel links */
+.header__nav a {
+    float: left;
+    text-align: right;
+    padding: 8px 39px 44px 5px;
+    text-decoration: none;
+    display: block;
+    justify-content: flex-end;
+    align-items: center;
+    transition: 0.3s;
+    color: #8c8d8c;
+    font-family: "Book Antiqua";
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+/* When you mouse over the navigation links, change their color */
+.header__nav a:hover {
+    color: #f1f1f1;
+    text-decoration: underline;
+}
+
+/* Position and style the close button (top right corner) */
+.header__nav .closebtn {
+    position: absolute;
+    top: 51;
+    top: 40px;
+    right: 54px;
+    font-size: 72px;
+    right: 37px;
+}
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+    font-size: 43px;
+    cursor: pointer;
+    background-color: inherit;
+    color: white;
+    border: none;
+    position: absolute;
+    top: 32px;
+    right: 73px;
+}
+
+.openbtn :active {
+    display: none;
+}
+
+.header__menunav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header__button {
+    width: 9%;
+}
+
+.header__social {
+    position: absolute;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    top: 173px;
+    left: -23px;
+    letter-spacing: 0.12em;
+}
+
+.header__social--xs {
+    display: none;
+
+}
+
+.header__social a {
+    display: block;
+    text-decoration: none;
+    padding-right: 50px;
+    transition: all 0.3s ease;
+    /* Add transition for hover effects */
+    color: #8c8d8c;
+    font-family: 'Book Antiqua';
+    font-size: 20px;
+    font-weight: 400;
+    transform: rotate(-90deg);
+
+
+}
+
+.header__social a:hover {
+    text-decoration: underline;
+    color: #f1f1f1;
+}
+
+.header__img {
+    max-width: 287px;
+    max-height: 287px;
+    background-color: #cdcdcd;
+}
+
+.header__list {
+    padding-right: 174px;
+
+}
+
+/*slide*/
+.slider {
+    display: none;
+}
+
+.slider-1 {
+    position: absolute;
+    overflow: hidden;
+    max-width: 1171px;
+    max-height: 285px;
+    background-color: #fdfefd;
+    border: 1px solid white;
+    top: 638px;
+    right: 0;
+}
+
+.slider__wrapper {
+    display: flex;
+    transition: transform 0.6s ease;
+}
+
+.slider__item {
+
+    max-width: 287px;
+    max-height: 287px;
+}
+
+.slider__control {
+    position: absolute;
+    top: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    color: #fff;
+    text-align: center;
+    opacity: 0.5;
+    height: 100%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, .5);
+}
+
+.slider__control_show {
+    display: none;
+}
+
+.slider__control:hover,
+.slider__control:focus {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+    opacity: .9;
+}
+
+.slider__control_left {
+    left: 0;
+}
+
+.slider__control_right {
+    right: 0;
+}
+
+.slider__control::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.slider__control_left::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.slider__control_right::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.slider__item>div {
+    line-height: 250px;
+    font-size: 100px;
+    text-align: center;
+}
+
+/* about___________________________________*/
+
+.about__xs {
+    display: none;
+
+
+}
+
+.about {
+    position: relative;
+    display: flex;
+    margin-bottom: 62px;
+    overflow: hidden;
+}
+
+.about__left {
+    position: absolute;
+    right: 20px;
+    background-color: white;
+
+}
+
+.about__title {
+    padding-left: 430px;
+    margin-top: -6px;
+    padding-bottom: 40px;
+    letter-spacing: 0.09em;
+    line-height: 1.4;
+}
+
+.about__title h3 {
+    color: #8c8d8c;
+    font-family: "Book Antiqua";
+    font-size: 30px;
+    font-style: italic;
+    margin-top: 0;
+    margin-left: 12px;
+}
+
+.about__title h2 {
+    color: black;
+    font-family: 'Raleway';
+    font-size: 40px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-left: -9px;
+    margin-top: -4px;
+    letter-spacing: 0.1em;
+}
+
+.about__left {
+    font-family: "Book Antiqua";
+    line-height: 1.5;
+    color: #000100;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.about__left span {
+    color: #010e19;
+    font-size: 26px;
+    font-style: italic;
+}
+
+.about__lorem {
+    padding-top: 30px;
+    padding-left: 40px;
+
+}
+
+
+/*product__________________________________________*/
+
+.product {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-bottom: 106px;
+}
+
+.product__title {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.product__title h3 {
+    color: #8c8d8c;
+    font-family: "Book Antiqua";
+    font-size: 30px;
+    font-style: italic;
+    line-height: 32px;
+    letter-spacing: 0.04em;
+}
+
+.product__title h2 {
+    color: black;
+    font-family: 'Raleway';
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    margin-left: 5px;
+    margin-bottom: -3px;
+}
+
+.product__box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    position: relative;
+
+}
+
+.product__price {
+    color: #fefefe;
+    font-family: "Book Antiqua";
+    font-size: 45px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 32px;
+}
+
+.product__name {
+    color: #fefefe;
+    font-family: 'Raleway';
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 32px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.product__category {
+    color: #fefefe;
+    font-family: "Book Antiqua";
+    font-size: 25px;
+    font-style: italic;
+    line-height: 32px;
+    text-decoration: underline;
+}
+
+.product__img {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.product__img .image {
+
+    width: 100%;
+    height: 100%;
+}
+
+.product__overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: black;
+    /*padding-top: 30px;
+    padding-left: 20px;*/
+    display: block;
+    justify-content: center;
+
+}
+
+.product__img:hover .product__overlay {
+    opacity: 0.5;
+}
+
+.product__text {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /*-webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);*/
+    text-align: center;
+    outline: 1px solid white;
+    outline-offset: -15px;
+    border-radius: -10%;
+    align-items: center;
+    padding-top: 50%;
+
+}
+
+/*partners______________________________*/
+
+.partners {
+    margin-bottom: 88px;
+}
+
+.partners__title {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.partners__title h3 {
+    color: #8c8d8c;
+    font-family: "Book Antiqua";
+    font-size: 30px;
+    font-style: italic;
+    line-height: 32px;
+    letter-spacing: 0.03em;
+    margin-left: 19px;
+}
+
+.partners__title h2 {
+    color: black;
+    font-family: 'Raleway';
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 53px;
+}
+
+.partners__title p {
+    color: black;
+    font-family: "Book Antiqua";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: justify;
+    text-align: center;
+    letter-spacing: 0.14em;
+}
+
+.partners__scroll {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-around;
+    /* width: 1163px; */
+    height: 102px;
+}
+
+.partners__scroll a:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.partners__scroll img {
+    transition: all 1s ease-out;
+}
+
+.partners__scroll img:hover {
+    transform: scale(1.1);
+}
+
+/*call_______________*/
+.call {
+    background-image: url(../img/call.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* min-width: 1927px; */
+    min-height: 796px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.call h3 {
+    color: white;
+    font-family: "Book Antiqua";
+    font-size: 50px;
+    font-style: italic;
+    line-height: 1.2;
+    margin-top: -3px;
+    letter-spacing: 0.06em;
+    text-align: center;
+}
+
+.call h2 {
+    color: white;
+    font-family: 'Raleway';
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.call p {
+    color: white;
+    font-family: "Book Antiqua";
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 48px;
+
+    letter-spacing: 0.12em;
+    text-align: center;
+    margin-bottom: 62px;
+}
+
+.call__btn {
+    display: inline-block;
+    border: 2px solid white;
+    padding: 30px 54px;
+    font-size: 16px;
+    cursor: pointer;
+    cursor: pointer;
+    color: white;
+    font-family: 'Raleway';
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background: none;
+    letter-spacing: 0.09em;
+    margin-top: -5px;
+    text-decoration: none;
+}
+
+.call__btn:hover {
+    text-decoration: underline;
+}
+
+/*testimonials____________________________*/
+.testimonials {
+    display: flex;
+    position: relative;
+    margin-bottom: 189px;
+
+}
+
+
+.testimonials h3 {
+    color: #8c8d8c;
+    font-family: "Book Antiqua";
+    font-size: 30px;
+    font-style: italic;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 0.09em;
+}
+
+.testimonials h2 {
+    color: #010101;
+    font-family: Raleway;
+    font-size: 40px;
+    font-weight: 500;
+
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 100px;
+    letter-spacing: 0.09em;
+}
+
+.testimonials__left {
+    position: absolute;
+    background-color: white;
+    top: 80px;
+    left: -161px;
+    padding-left: 20px;
+}
+
+.testimonials__right {
+    position: absolute;
+    background-color: white;
+    top: 80px;
+    right: -161px;
+    z-index: 1;
+    padding-right: 20px;
+}
+
+
+span .quotes {
+    font-family: "Book Antiqua";
+    font-size: 50px;
+}
+
+span .amanda {
+    font-family: 'Raleway';
+    font-weight: 500;
+}
+
+span .years {
+    font-family: "Book Antiqua";
+    font-weight: 400;
+}
+
+.testimonials p {
+    color: black;
+    font-family: "Book Antiqua";
+    font-weight: 400;
+    line-height: 32px;
+    font-size: 20px;
+}
+
+/*insta__________________________________*/
+.insta-xs {
+    display: none;
+}
+
+.insta {
+    overflow: hidden;
+}
+
+.insta__box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    /*height: 540px;*/
+    position: relative;
+}
+
+
+.insta__img {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    opacity: 1;
+    cursor: pointer;
+    left: 0;
+    right: 0;
+}
+
+.insta__img img {
+    position: relative;
+    height: 540px;
+    vertical-align: middle;
+}
+
+.insta__item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    top: 0;
+    left: 0;
+}
+
+.insta__item ::before {
+    content: '';
+    display: block;
+}
+
+.insta__overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: black;
+    /*padding-top: 30px;
+    padding-left: 20px;*/
+    display: block;
+    justify-content: center;
+
+}
+
+.insta__img:hover .insta__overlay {
+    opacity: 0.5;
+}
+
+.insta__text {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /*-webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);*/
+    text-align: center;
+    outline: 1px solid white;
+    outline-offset: -15px;
+    border-radius: -10%;
+    align-items: center;
+    padding-top: 50%;
+
+}
+
+
+.insta__text p {
+    color: white;
+    font-family: "Book Antiqua";
+    font-size: 30px;
+    font-style: italic;
+    line-height: 32px;
+}
+
+/*form_________________________*/
+.form-xs {
+    display: none;
+}
+
+.form {
+    margin-bottom: -26px;
+    background-image: url(../img/form_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 1029px;
+    color: white;
+    overflow: hidden;
+}
+
+.form h3 {
+    color: #8c8d8c;
+    font-family: "Book Antiqua";
+    font-size: 30px;
+    font-style: italic;
+    line-height: 1.2;
+    text-align: center;
+    padding-top: 65px;
+    letter-spacing: 0.08em;
+
+}
+
+.form h2 {
+    color: white;
+    font-family: Raleway;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.09em;
+    margin-bottom: 99px;
+}
+
+
+
+input {
+    color: white;
+    font-family: "Book Antiqua";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    display: block;
+    height: 56px;
+    background-color: rgba(31, 31, 30, 0.2);
+    margin-bottom: 40px;
+    padding-left: 34px;
+    width: 100%;
+}
+
+select {
+    color: white;
+    font-family: "Book Antiqua";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    display: block;
+    height: 56px;
+    background-color: rgba(7, 7, 7, 0.9);
+    margin-bottom: 40px;
+    padding-left: 34px;
+    width: 100%;
+}
+
+
+.form p {
+    margin-top: 12px;
+    letter-spacing: 0.09em;
+    margin-right: 40px;
+    color: white;
+    font-family: "Book Antiqua";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+.form__btn {
+    display: inline-block;
+    border: 2px solid white;
+    padding: 30px 91px;
+    font-size: 16px;
+    cursor: pointer;
+    cursor: pointer;
+    color: white;
+    font-family: 'Raleway';
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: rgba(31, 31, 30, 0.2);
+    letter-spacing: 0.09em;
+    margin-top: 96px;
+    margin-left: 437px;
+}
+
+select .form__num {
+    padding-left: 40px;
+}
+
+.form__btn:hover {
+    text-decoration: underline;
+}
+
+input::-moz-placeholder {
+    color: white;
+}
+
+input::-webkit-input-placeholder {
+    color: white;
+}
+
+::-moz-selection {
+
+    background-color: rgba(31, 31, 30, 0.2);
+    color: white;
+}
+
+::selection {
+    background-color: rgba(31, 31, 30, 0.2);
+    color: white;
+}
+
+.form__total {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 100px;
+}
+
+.form__total-box {
+    display: block;
+    width: 270px;
+    height: 56px;
+    background-color: rgba(228, 212, 212, 0.2);
+}
+
+
+/*footer_________________*/
+.footer {
+    min-height: 357px;
+    position: relative;
+    background-color: black;
+    border-top: solid 0.1px white;
+    display: flex;
+}
+
+.footer__inf {
+    padding-top: 136px;
+}
+
+.footer__logo {
+    margin-bottom: 48px;
+    text-align: center;
+
+}
+
+.footer__logo a {
+    letter-spacing: 0.1em;
+
+    color: #fdfefd;
+    font-family: 'Raleway';
+    font-size: 85px;
+    font-weight: 200;
+    line-height: 22px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+}
+
+.footer h3 {
+    color: #8c8d8c;
+    font-family: "Book Antiqua";
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0.09em;
+}
+
+.footer .span_t {
+    line-height: 32px;
+}
+
+.footer .span_p {
+    line-height: 22px;
+}
+
+.footer a {
+    color: #8c8d8c;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.mure {
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+}
+
+.call__btn {
+    animation-duration: 4s;
+    animation-delay: 0.3s;
+    animation-iteration-count: infinite;
+}
+
+
+.top-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    background-color: #f1f1f1;
+    color: #000100;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 24px;
+    z-index: 9999;
+    cursor: pointer;
+    line-height: 48px;
+    transition: all .5s;
+}
+
+.top-btn:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, .5)
+}
+
+@media (max-width:1380px){
+   .header__social {
+        background-color: black;
+        opacity: 0.8;
+    }
+    .header__social a {
+        padding-right: 20px;
+    }
+}
+
+
+@media screen and (max-width:1200px) {
+    .about__title {
+        padding-left: 360px;
+        padding-bottom: 40px;
+    }
+
+    .about__left {
+        font-size: 20px;
+    }
+
+}
+
+
+@media screen and (max-width:992px) {
+    .footer__logo a {
+        left: auto;
+        position: relative;
+        font-size: 120px;
+
+    }
+
+    .header__logo {
+        top: 270px;
+    }
+
+    .header__nav {
+        max-width: 100%;
+    }
+
+
+    .header__social {
+        background-color: black;
+        opacity: 0.8;
+    }
+
+    .header__social a {
+        padding-right: 0;
+    }
+
+    .about__title {
+        line-height: 1.3;
+        padding-left: 160px;
+        color: white;
+        padding-top: 20px;
+    }
+
+    .about__title h2 {
+        color: rgb(243, 239, 239);
+    }
+
+    .about__left {
+        font-size: 18px;
+    }
+
+    .product__box {
+        margin-left: 20px;
+    }
+
+    .product__img {
+        padding-bottom: 20px;
+    }
+
+    .product__overlay {
+        height: 97%;
+    }
+
+    .offset-1 {
+        margin-left: 0;
+    }
+
+    select {
+        padding-left: 20px;
+    }
+
+    .form__btn {
+        margin-bottom: 67px;
+        margin-top: 39px;
+        margin-left: 0;
+    }
+
+    .insta__img {
+        margin-bottom: 20px;
+    }
+
+    .insta__overlay {
+        height: 97%;
+    }
+
+    .top-btn {
+        right: 50px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .openbtn {
+        top: 20px;
+        right: 10px;
+        font-size: 42px;
+        opacity: 0.5;
+    }
+
+    .header {
+        margin-bottom: 150px;
+    }
+
+    .logo a {
+        font-size: 100px;
+    }
+
+    .header__logo {
+        right: 8px;
+    }
+
+    .header__social a {
+        color: white;
+    }
+
+    .header__social {
+        background-color: black;
+        opacity: 0.8;
+    }
+
+    .header__nav a {
+        display: flex;
+        font-size: 42px;
+        padding-top: 50px;
+        float: inherit;
+        justify-content: center;
+
+    }
+
+
+    .header__nav .closebtn {
+        top: 0;
+        right: 0;
+
+    }
+
+    .header__nav {
+        position: absolute;
+        height: 80%;
+        opacity: 1;
+    }
+
+    .header__list {
+
+        padding-right: 235px;
+    }
+
+    .about__title {
+        padding-left: 60px;
+        padding-bottom: 10px;
+    }
+
+    .about__left {
+        font-size: 15px;
+    }
+
+    .about__lorem {
+        padding-top: 14px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .about__left span {
+        font-size: 22px;
+    }
+
+    .product__img .image {
+        padding-bottom: 20px;
+    }
+
+    .product__overlay {
+        height: 93%;
+    }
+
+    .product__title {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .product {
+        margin-bottom: 50px;
+    }
+
+    .partners {
+        margin-bottom: 130px;
+    }
+
+    .insta__img {
+        margin-bottom: 20px;
+    }
+
+    .partners__scroll img {
+        margin-bottom: 25px;
+    }
+
+    .partners__title {
+        margin-bottom: 60px;
+    }
+
+    offset-1 {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .logo a {
+        font-size: 100px;
+    }
+
+    .top-btn {
+        right: auto;
+        left: 40px;
+    }
+
+    .header__logo {
+        right: 100px;
+    }
+
+    .logo a {
+        font-size: 50px;
+    }
+
+    .header__logo {
+        right: 88px;
+        top: 122px;
+        color: #fdfefd;
+        font-size: 60px;
+        font-weight: 200;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+    }
+
+    .header {
+        height: 80vh;
+        margin-bottom: 0;
+        background-image: url(../img/header_backgraund-xs.png);
+    }
+
+    .slider {
+        max-width: 100%;
+        top: 525px;
+    }
+
+    .slide-hidden {
+        display: none;
+    }
+
+    .header__social {
+        display: none;
+    }
+
+    .header__social--xs {
+        display: block;
+        position: absolute;
+        top: 48px;
+        display: flex;
+        left: 0;
+    }
+    .slider-1 {
+top:515px;
+    }
+    .header__social--xs .xs {
+        color: #fdfefd;
+        opacity: 0.5;
+        padding-left: 40px;
+        font-size: 20px;
+    }
+
+    .header__social--xs .xs:hover {
+        font-size: 50px;
+        color: rgb(253, 252, 252);
+    }
+
+    .header__social--xs .xs:active {
+        color: rgb(119, 104, 104);
+    }
+
+    .header__nav a {
+        display: flex;
+        font-size: 42px;
+        padding-top: 50px;
+
+    }
+
+    .header__nav .closebtn {
+        top: 0;
+        right: 0;
+
+    }
+
+    .header__nav {
+        position: absolute;
+        height: 80%;
+        opacity: 1;
+        align-items: inherit;
+    }
+
+    .header__list {
+        padding-right: 90px;
+        padding-top: 76px;
+    }
+
+    .about {
+        display: none;
+    }
+
+    .about__xs {
+        display: block;
+
+        /*height: 100vh;*/
+        background-image: url(../img/about-bg-xs.png);
+        color: rgb(233, 223, 223);
+        font-size: 16px;
+        line-height: 1.8;
+        letter-spacing: 0.05em;
+        padding-bottom: 30px;
+    }
+
+    .about__xs h5 {
+        text-align: center;
+        padding-top: 21px;
+        padding-bottom: 13px;
+        opacity: 0.5;
+    }
+
+    .about__xs h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+    }
+
+    .about__xs h4 {
+        font-style: italic;
+        letter-spacing: 0.1em;
+    }
+
+
+    .about__xs-text {
+        padding-left: 20px;
+    }
+
+    .product {
+        height: 100vh;
+
+        margin-top: 30px;
+    }
+
+    .product__title h2 {
+        font-size: 32px;
+        margin-left: 0;
+    }
+
+
+    .product__img {
+        padding-right: 30px;
+    }
+
+    .product__img .image {
+        padding-bottom: 10px;
+    }
+
+    .product__title {
+        margin-bottom: 40px;
+    }
+
+    .product__title h3 {
+        line-height: 2;
+    }
+
+    .product__overlay {
+        height: 47%;
+        top: 364px;
+        background-color: white;
+        opacity: 1;
+        width: 80%;
+        left: 20px;
+    }
+
+    .product__text {
+        padding-top: 22%;
+        outline: 1px solid rgb(8, 8, 8);
+        color: #000100;
+    }
+
+    .product__price {
+        color: #000100;
+        font-size: 36px;
+        line-height: 0;
+    }
+
+    .product__name {
+        color: #000100;
+        font-size: 24px;
+        line-height: 0;
+    }
+
+    .product__category {
+        color: #000100;
+        line-height: 0;
+    }
+
+
+    .partners__scroll {
+        width: 100%;
+        height: 100%;
+        padding-left: 88px;
+    }
+
+    .partners {
+
+        height: 100vh;
+    }
+
+    .call h2 {
+        font-size: 31px;
+        line-height: 1.3;
+        margin-bottom: 50px;
+    }
+
+
+    .call h3 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .call p {
+        font-size: 18px;
+        line-height: 1.5;
+        letter-spacing: 0.2em;
+    }
+
+    .call__btn {
+        padding: 25px 45px;
+    }
+
+
+
+    .call {
+        margin-top: -170px;
+        margin-bottom: 40px;
+        background-image: url(../img/call-xs.png);
+    }
+
+
+    .testimonials h2 {
+        margin-bottom: 40px;
+    }
+
+    .testimonials__right {
+        padding-left: 20px;
+    }
+
+    .testimonials {
+        margin-bottom: 40px;
+    }
+
+    .offset-1 {
+        margin-left: 0;
+    }
+
+    .select {
+        margin-left: -30px;
+    }
+
+    .form h2 {
+        padding-top: 20px;
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .form h3 {
+        padding-top: 20px;
+    }
+
+    input {
+        margin-bottom: 20px;
+        padding-left: 20px;
+        height: 40px;
+    }
+
+    select {
+        margin-bottom: 20px;
+        padding-left: 10px;
+        height: 40px;
+    }
+
+    select .padding {
+        margin-left: -30px;
+    }
+
+    .footer {
+        min-height: 220px;
+    }
+
+    .footer__inf {
+        padding-top: 0;
+    }
+
+    .footer h3 {
+        font-size: 18px;
+
+    }
+
+    .footer__logo a {
+
+        top: 45px;
+        font-size: 50px;
+    }
+
+    .form__btn {
+        margin-left: 20px;
+        text-decoration: none;
+        margin-top: 60px;
+    }
+
+    .form__btn :hover {
+        text-decoration: underline;
+        border: 5px solid white;
+    }
+
+    .partners__scroll img {
+        margin-bottom: 50px;
+        width: 70%;
+    }
+
+    .top-btn {
+        display: block !important;
+    }
+
+}
+
+@media screen and (max-width:321px) {
+    .offset-1 {
+        margin-left: 0;
+    }
+
+    .product {
+        height: 104vh;
+    }
+
+    .product__overlay {
+        height: 47%;
+        top: 280px;
+    }
+
+    .product__name {
+        font-size: 18px;
+    }
+
+    .form__btn {
+        margin-left: -6px;
+    }
+    .slider-1 {
+        top:639px;
+            }
+}
+
+
+@media (max-width:1380px){
+    .testimonials__img img{
+    height: auto;
+    max-width: 100%;
+    }
+    }
+    
+    @media (max-width:1200px){
+    .testimonials__img1 img{
+    height: auto;
+    max-width: 223%;
+    }
+    }
+    
+    @media (max-width:991px){
+    .testimonials__img1 img{
+    height: auto;
+    max-width: 100%;
+    }
+    .testimonials__left{
+    top: 15px;
+    left: -48px;
+    }
+    .testimonials__right{
+    top: 35px;
+    right: -55px;
+    }
+    }
+    
+    @media (max-width:767px){
+    .testimonials__left{
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-left: 0;
+    }
+    .testimonials__right{
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-left: 0;
+    }
+    .testimonials p{
+    font-size: 18px;
+    text-align: justify;
+    }
+    
+    .testimonials .row:last-child{
+    margin-top: 25px;
+    }
+    }
