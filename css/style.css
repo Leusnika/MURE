@@ -2,11 +2,16 @@
     box-sizing: border-box;
     min-height: 0;
     min-width: 0;
+    
 }
-
+.container-fluid {
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+ } 
 body {
     margin: 0;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Merriweather', sans-serif;
     /*background-image: url('./DBpng.png');*/
     max-width: 100%;
     background-position: top;
@@ -47,7 +52,7 @@ body {
     width: 458px;
     height: 139px;
     color: #fdfefd;
-    font-family: Raleway;
+    font-family: 'Times New Roman';
     font-size: 150px;
     font-weight: 200;
     line-height: 22px;
@@ -99,7 +104,7 @@ body {
     align-items: center;
     transition: 0.3s;
     color: #8c8d8c;
-    font-family: "Book Antiqua";
+    font-family: 'Merriweather';
     font-size: 30px;
     font-weight: 400;
     line-height: 22px;
@@ -120,6 +125,9 @@ body {
     font-size: 72px;
     right: 37px;
 }
+.header__nav .closebtn:hover{
+    text-decoration: none;
+}
 
 /* Style the button that is used to open the sidepanel */
 .openbtn {
@@ -132,6 +140,10 @@ body {
     top: 32px;
     right: 73px;
 }
+.openbtn:hover{
+    color: #8c8d8c;
+    opacity: 0.8;
+}
 
 .openbtn :active {
     display: none;
@@ -140,6 +152,7 @@ body {
 .header__menunav {
     display: flex;
     justify-content: flex-end;
+    z-index: 10;
 }
 
 .header__button {
@@ -170,7 +183,7 @@ body {
     transition: all 0.3s ease;
     /* Add transition for hover effects */
     color: #8c8d8c;
-    font-family: 'Book Antiqua';
+    font-family: 'Merriweather';
     font-size: 20px;
     font-weight: 400;
     transform: rotate(-90deg);
@@ -204,8 +217,8 @@ body {
     overflow: hidden;
     max-width: 1171px;
     max-height: 285px;
-    background-color: #fdfefd;
-    border: 1px solid white;
+  /*  background-color: #fdfefd;
+    border: 1px solid white;*/
     top: 638px;
     right: 0;
 }
@@ -311,7 +324,7 @@ body {
 
 .about__title h3 {
     color: #8c8d8c;
-    font-family: "Book Antiqua";
+    font-family: 'Merriweather';
     font-size: 30px;
     font-style: italic;
     margin-top: 0;
@@ -320,7 +333,7 @@ body {
 
 .about__title h2 {
     color: black;
-    font-family: 'Raleway';
+    font-family: 'Merriweather';
     font-size: 40px;
     font-weight: 500;
     text-transform: uppercase;
@@ -330,10 +343,10 @@ body {
 }
 
 .about__left {
-    font-family: "Book Antiqua";
+    font-family: 'Merriweather';
     line-height: 1.5;
     color: #000100;
-    font-size: 24px;
+    font-size: 23px;
     font-weight: 400;
 }
 
@@ -366,7 +379,7 @@ body {
 
 .product__title h3 {
     color: #8c8d8c;
-    font-family: "Book Antiqua";
+    font-family: 'Merriweather';
     font-size: 30px;
     font-style: italic;
     line-height: 32px;
@@ -375,7 +388,7 @@ body {
 
 .product__title h2 {
     color: black;
-    font-family: 'Raleway';
+    font-family: 'Merriweather';
     font-size: 40px;
     font-weight: 500;
     line-height: 1.2;
@@ -389,14 +402,14 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 100%;
+   /* width: 100%;*/
     position: relative;
 
 }
 
 .product__price {
     color: #fefefe;
-    font-family: "Book Antiqua";
+    font-family: 'Merriweather';
     font-size: 45px;
     font-weight: 700;
     text-transform: uppercase;
@@ -405,7 +418,7 @@ body {
 
 .product__name {
     color: #fefefe;
-    font-family: 'Raleway';
+    font-family: 'Merriweather';
     font-size: 30px;
     font-weight: 500;
     line-height: 32px;
@@ -415,7 +428,7 @@ body {
 
 .product__category {
     color: #fefefe;
-    font-family: "Book Antiqua";
+    font-family: 'Merriweather';
     font-size: 25px;
     font-style: italic;
     line-height: 32px;
@@ -492,7 +505,7 @@ body {
 
 .partners__title h3 {
     color: #8c8d8c;
-    font-family: "Book Antiqua";
+    font-family: 'Merriweather';
     font-size: 30px;
     font-style: italic;
     line-height: 32px;
@@ -502,7 +515,7 @@ body {
 
 .partners__title h2 {
     color: black;
-    font-family: 'Raleway';
+    font-family: 'Merriweather';
     font-size: 40px;
     font-weight: 500;
     line-height: 1.2;
@@ -513,7 +526,7 @@ body {
 
 .partners__title p {
     color: black;
-    font-family: "Book Antiqua";
+    font-family: 'Merriweather';
     font-size: 20px;
     font-weight: 400;
     line-height: 32px;
@@ -561,7 +574,7 @@ body {
 
 .call h3 {
     color: white;
-    font-family: "Book Antiqua";
+    font-family: 'Merriweather';
     font-size: 50px;
     font-style: italic;
     line-height: 1.2;
@@ -572,7 +585,7 @@ body {
 
 .call h2 {
     color: white;
-    font-family: 'Raleway';
+    font-family: 'Merriweather';
     font-size: 60px;
     font-weight: 500;
     line-height: 1.2;
@@ -582,7 +595,7 @@ body {
 
 .call p {
     color: white;
-    font-family: "Book Antiqua";
+    font-family: 'Merriweather';
     font-size: 30px;
     font-weight: 400;
     line-height: 48px;
@@ -600,7 +613,7 @@ body {
     cursor: pointer;
     cursor: pointer;
     color: white;
-    font-family: 'Raleway';
+    font-family: 'Merriweather';
     font-size: 30px;
     font-weight: 500;
     text-transform: uppercase;
@@ -625,7 +638,7 @@ body {
 
 .testimonials h3 {
     color: #8c8d8c;
-    font-family: "Book Antiqua";
+    font-family: 'Merriweather';
     font-size: 30px;
     font-style: italic;
     line-height: 1.2;
@@ -635,7 +648,7 @@ body {
 
 .testimonials h2 {
     color: #010101;
-    font-family: Raleway;
+    font-family: 'Merriweather';
     font-size: 40px;
     font-weight: 500;
 
@@ -651,6 +664,7 @@ body {
     top: 80px;
     left: -161px;
     padding-left: 20px;
+    padding-right: 20px;
 }
 
 .testimonials__right {
@@ -660,27 +674,28 @@ body {
     right: -161px;
     z-index: 1;
     padding-right: 20px;
+    padding-left: 20px;
 }
 
 
 span .quotes {
-    font-family: "Book Antiqua";
+    font-family: 'Merriweather';
     font-size: 50px;
 }
 
 span .amanda {
-    font-family: 'Raleway';
+    font-family: 'Merriweather';
     font-weight: 500;
 }
 
 span .years {
-    font-family: "Book Antiqua";
+    font-family: 'Merriweather';
     font-weight: 400;
 }
 
 .testimonials p {
     color: black;
-    font-family: "Book Antiqua";
+    font-family: 'Merriweather';
     font-weight: 400;
     line-height: 32px;
     font-size: 20px;
@@ -696,7 +711,7 @@ span .years {
 }
 
 .insta__box {
-    display: flex;
+  /*  display: flex;*/
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
@@ -781,7 +796,7 @@ span .years {
 
 .insta__text p {
     color: white;
-    font-family: "Book Antiqua";
+    font-family: 'Merriweather';
     font-size: 30px;
     font-style: italic;
     line-height: 32px;
@@ -805,7 +820,7 @@ span .years {
 
 .form h3 {
     color: #8c8d8c;
-    font-family: "Book Antiqua";
+    font-family: 'Merriweather';
     font-size: 30px;
     font-style: italic;
     line-height: 1.2;
@@ -817,7 +832,7 @@ span .years {
 
 .form h2 {
     color: white;
-    font-family: Raleway;
+    font-family: 'Merriweather';
     font-size: 40px;
     font-weight: 500;
     line-height: 1.2;
@@ -831,21 +846,23 @@ span .years {
 
 input {
     color: white;
-    font-family: "Book Antiqua";
+    font-family: 'Merriweather';
     font-size: 20px;
     font-weight: 400;
     line-height: 32px;
     display: block;
     height: 56px;
-    background-color: rgba(31, 31, 30, 0.2);
+    background-color:rgba(7, 7, 7, 0.9);
     margin-bottom: 40px;
     padding-left: 34px;
     width: 100%;
+    border: none;
+    border: 1px solid white;
 }
 
 select {
     color: white;
-    font-family: "Book Antiqua";
+    font-family: 'Merriweather';
     font-size: 20px;
     font-weight: 400;
     line-height: 32px;
@@ -855,6 +872,8 @@ select {
     margin-bottom: 40px;
     padding-left: 34px;
     width: 100%;
+    border: none;
+    border: 1px solid white;
 }
 
 
@@ -863,7 +882,7 @@ select {
     letter-spacing: 0.09em;
     margin-right: 40px;
     color: white;
-    font-family: "Book Antiqua";
+    font-family: 'Merriweather';
     font-size: 20px;
     font-weight: 400;
     line-height: 32px;
@@ -877,7 +896,7 @@ select {
     cursor: pointer;
     cursor: pointer;
     color: white;
-    font-family: 'Raleway';
+    font-family: 'Merriweather';
     font-size: 30px;
     font-weight: 500;
     text-transform: uppercase;
@@ -885,7 +904,9 @@ select {
     letter-spacing: 0.09em;
     margin-top: 96px;
     margin-left: 437px;
+    text-decoration: none;
 }
+
 
 select .form__num {
     padding-left: 40px;
@@ -949,9 +970,8 @@ input::-webkit-input-placeholder {
 
 .footer__logo a {
     letter-spacing: 0.1em;
-
     color: #fdfefd;
-    font-family: 'Raleway';
+    font-family: 'Times New Roman';
     font-size: 85px;
     font-weight: 200;
     line-height: 22px;
@@ -962,7 +982,7 @@ input::-webkit-input-placeholder {
 
 .footer h3 {
     color: #8c8d8c;
-    font-family: "Book Antiqua";
+    font-family: 'Merriweather';
     font-size: 25px;
     font-weight: 400;
     text-align: center;
@@ -984,7 +1004,7 @@ input::-webkit-input-placeholder {
 
 .footer a:hover {
     color: white;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .mure {

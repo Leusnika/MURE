@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mure</title>
-  <link href="https://fonts.googleapis.com/css?family=Raleway:200,400,400i,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
     crossorigin="anonymous">
   <link rel="stylesheet" href="./css/bootsrtap.css">
@@ -17,8 +17,10 @@
 
 </head>
 
+<a id="top"></a>
+
 <body>
-  <a id="top"></a>
+ 
   
   <div class="header">
     <div class="container">
@@ -196,6 +198,8 @@
     </div>
     <div class="w-100"></div>
 
+    <div class="container-fluid">
+
     <div class="row product__box">
       <div class="col-12 col-lg-3 col-sm-6">
         <div class="product__img">
@@ -252,6 +256,8 @@
           </div>
         </div>
       </div>
+    </div>
+
     </div>
 
   </div>
@@ -541,75 +547,7 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/wow.min.js"></script>
-<script>
-  $(function () {
-    $('.slider-1').owlCarousel({
-      navText: "",
-      loop: true,
-      autoplay: true,
-      fluidSpeed: 600,
-      autoplaySpeed: 600,
-      items: 4,
-      margin: 0,
-      responsiveClass: true,
-      responsive: {
-        0: {
-          items: 2,
-          nav: true
-        },
-        600: {
-          items: 3,
-          nav: false
-        },
-        1000: {
-          items: 4,
-          nav: true,
-          loop: false
-        }
-      }
-    })
-
-
-    new WOW().init(); /*инициал. экземпляр класс wow для запуска анимации.*/
-    $('.header__list a').on('click', function (e) {
-      e.preventDefault(); /*отмена стандартн поведение ссылки*/
-      var selector = $(this).attr('href'); /*получаем атрибут href по клику на ссылку*/
-      var h = $(selector); /*передали данные в перем. H*/
-      $('html, body').animate({
-        scrollTop: h.offset().top - 110
-      }, 1000)
-    })
-
-    $(window).on('scroll', function () {
-      if ($(this).scrollTop() > 100) {
-        $('.top-btn').fadeIn(300);
-      } else {
-        $('.top-btn').fadeOut(300);
-      }
-    })
-    $('.top-btn').click(function () {
-      $('html, body').animate({
-        scrollTop: 0
-      }, 400)
-    })
-
-  })
-
-
-
-  /* Set the width of the sidebar to 250px (show it) */
-  function openNav() {
-    document.getElementById("header__manunav").style.width = "100%";
-    document.getElementsByClassName('openbtn')[0].style.visibility = 'hidden';
-  }
-
-  /* Set the width of the sidebar to 0 (hide it) */
-  function closeNav() {
-    document.getElementById("header__manunav").style.width = "0";
-    document.getElementsByClassName('openbtn')[0].style.visibility = 'visible';
-  }
-</script>
-
+<script src="js/script.js"></script>
 
 </body>
 
