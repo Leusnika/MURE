@@ -1491,6 +1491,17 @@ input::-webkit-input-placeholder {
 
 @media screen and (max-width:576px) {
 
+    .modal-content {
+        width: 100%;
+        height: 100%;
+    }
+    .modal {
+        background-color: black;
+    }
+    .call input{
+        height: 50px;
+    }
+
     .slider__xs {
         display: block;
         margin-bottom: 40px;
