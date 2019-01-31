@@ -1172,6 +1172,7 @@ input::-webkit-input-placeholder {
     font-weight: 500;
     background-color: rgba(31, 31, 30);
     letter-spacing: 0.09em;
+    cursor: pointer;
 }
 
 .signupbtn:hover {
@@ -1211,7 +1212,7 @@ input::-webkit-input-placeholder {
     /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
     width: 70%;
-    /* Could be more or less, depending on screen size */
+
 
 }
 
