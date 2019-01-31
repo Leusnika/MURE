@@ -370,12 +370,40 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br> sed do eiusmod tempor incididunt ut labore et
         dolore
       </p>
-      <form>
-
+      <!-- <form>
         <a href="javascript:void(0)" class="call__btn animated flash"> Call Back</a>
-
-
       </form>
+    -->
+
+    <form onclick="document.getElementById('id01').style.display='block'" style="width:auto;">
+        <a href="javascript:void(0)" class="call__btn animated flash"> Call Back</a>
+      </form>
+
+    <div id="id01" class="modal">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <form class="modal-content" action="/action_page.php">
+        <div class="container">
+          <h1>CALL BACK</h1>
+          <h4>Lorem ipsum dolor sit amet, consectetur adipiscing.</h4>
+          <hr>
+          <input type="text" placeholder="Enter your Name" name="Name" required>
+          <input type="text" placeholder="Enter your Last Name" name="Last Name" required>
+          <input type="text" placeholder="Enter your City" name="City" required>
+          <input type="text" placeholder="Enter your Tel Number" name="Tel" required>
+          <input type="text" placeholder="Enter your massage" name="massage" required>
+          
+          <div class="clearfix">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <button type="submit" class="signupbtn">Send</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+
+
+
+
     </div>
   </div>
 

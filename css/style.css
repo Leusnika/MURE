@@ -1075,7 +1075,7 @@ input::-webkit-input-placeholder {
     padding: 16px;
     color: white;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 50px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
@@ -1089,7 +1089,7 @@ input::-webkit-input-placeholder {
   
   /* On hover, add a black background color with a little bit see-through */
   .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(128, 124, 124, 0.8);
   }
   
   /* Caption text */
@@ -1147,6 +1147,121 @@ input::-webkit-input-placeholder {
   }
 
 
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    padding: 30px 20px;
+    background-color: rgba(7, 7, 7, 0.9);
+    border: 2px solid white;
+  }
+
+  .signupbtn {
+  padding: 30px 20px;
+  border: 2px solid white;
+  }
+  
+  /* Float cancel and signup buttons and add an equal width */
+  .cancelbtn, .signupbtn {
+    float: left;
+    width: 50%;
+    color: WHITE;
+    font-size: 26px;
+    text-transform: uppercase;
+    font-weight: 500;
+    background-color: rgba(31, 31, 30);
+    letter-spacing: 0.09em;
+  }
+  .signupbtn:hover {
+      background-color: #000100;
+      text-decoration: underline;
+  }
+  .cancelbtn:hover {
+    background-color: #000100;
+    text-decoration: underline;
+}
+  
+  /* Add padding to container elements */
+  .container {
+    padding: 16px;
+    background-image: url(/img/insta_1.jpg);
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 998; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+   
+    padding-top: 50px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 70%; /* Could be more or less, depending on screen size */
+    
+  }
+  
+  /* Style the horizontal ruler */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+   
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #8d8181;
+    cursor: pointer;
+  }
+  
+  /* Clear floats */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .call h1{
+    color: #8c8d8c;
+    font-family: 'Merriweather';
+    font-size: 30px;
+    font-style: italic;
+    line-height: 32px;
+    letter-spacing: 0.03em;
+  }
+  .call h4{
+    color: black;
+    font-family: 'Merriweather';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: justify;
+    text-align: center;
+    letter-spacing: 0.14em;
+  }
+  
+  /* Change styles for cancel button and signup button on extra small screens */
+  @media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+  }
 
 @media (max-width:1380px) {
     .header__list {
@@ -1558,7 +1673,7 @@ input::-webkit-input-placeholder {
     }
 
     .product__overlay {
-            height: 34%;
+            height: 190px;
     top: 300px;
         background-color: white;
         opacity: 0.9;
