@@ -435,7 +435,7 @@
 
     .product__overlay {
         height: 190px;
-        /* top: 340px;*/
+        top: 340px;
         background-color: white;
         opacity: 0.8;
         width: 80%;
@@ -606,8 +606,8 @@
     }
 
     .product__overlay {
-        height: 40%;
-        top: 226px;
+        height: 36%;
+        top: 260px;
         margin: 0 auto;
     }
 
